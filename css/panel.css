@@ -1,0 +1,128 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
+@font-face {
+  font-family: vazir;
+  src: url(fonts/Vazir.ttf);
+  font-family: shabnam;
+  src: url(fonts/Shabnam.ttf);
+  font-family: irsans;
+  src: url(fonts/irsans.ttf);
+}
+
+/* awesome = icon font */
+/* shabnam = main font */
+/* vazir =  */
+/* irsans =  */
+
+:root {
+  --lighter-Color: #82ccdd;
+  --light-color: #60a3bc;
+  --medium-color: #3c6382;
+  --dark-color: #0a3d62;
+  --fontLight-color: #f3f3f3;
+  --fontDark-color: #03111b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  line-height: 1.6;
+  direction: rtl;
+  font-family: shabnam, sans-serif;
+  font-size: 1.5rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+body li {
+  list-style: none;
+}
+
+/*********** Navigation ************/
+body .navigation {
+  background-color: var(--dark-color);
+  color: var(--fontLight-color);
+  height: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  z-index: 100;
+}
+
+.navigation .navIcons {
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.navigation .navIcons h5 {
+  margin-left: 5%;
+}
+
+.navigation .navIcons i {
+  padding: 15px;
+}
+
+.navigation .navIcons i:hover {
+  transform: scale(98%);
+  color: var(--light-color);
+  cursor: pointer;
+}
+
+.navigation .navIcons .notification {
+  position: absolute;
+  top: 5;
+  background-color: red;
+  font-size: 0.6rem;
+  text-align: center;
+  border-radius: 50%;
+  padding: 0.22rem 0.2rem;
+  color: var(--fontLight-color);
+}
+
+.navigation .navIcons input {
+  font-size: 1rem;
+  padding: 5px;
+  width: 60%;
+  min-width: 300px;
+  border-radius: 5px;
+  background-color: var(--fontLight-color);
+  border: none;
+}
+
+.navigation .navIcons input:focus {
+  font-size: 1rem;
+  outline-color: var(--light-color);
+  color: var(--fontDark-color);
+}
+
+/******** Tablets and under *********/
+@media (max-width: 768px) {
+  body .navigation {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: space-between;
+  }
+  .navIcons {
+    justify-content: left;
+  }
+  .navigation .navIcons h5 {
+    display: none;
+  }
+  .navIcons:first-child {
+    justify-content: right;
+  }
+  .navigation .navIcons input {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+}
