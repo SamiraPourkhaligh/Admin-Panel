@@ -45,15 +45,16 @@ body li {
 }
 
 /*********** Navigation ************/
-body .navigation {
+header .navigation {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
   background-color: var(--dark-color);
   color: var(--fontLight-color);
   height: 50px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  width: 100%;
   z-index: 100;
+  /* width: 100%; */
+  /* position: fixed; */
 }
 
 .navigation .navIcons {
@@ -62,7 +63,8 @@ body .navigation {
   align-items: center;
 }
 
-.navigation .navIcons h5 {
+.navigation .menu h5 {
+  min-width: 170px;
   margin-left: 5%;
 }
 
@@ -90,8 +92,9 @@ body .navigation {
 .navigation .navIcons input {
   font-size: 1rem;
   padding: 5px;
-  width: 60%;
-  min-width: 300px;
+  width: 50%;
+  min-width: 200px;
+  max-width: 400px;
   border-radius: 5px;
   background-color: var(--fontLight-color);
   border: none;
@@ -101,6 +104,41 @@ body .navigation {
   font-size: 1rem;
   outline-color: var(--light-color);
   color: var(--fontDark-color);
+}
+
+/******** Main *********/
+body .main {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 1fr;
+}
+
+/******** Aside *********/
+body .main .aside {
+  background-color: var(--medium-color);
+  min-width: 250px;
+  font-size: 0.8rem;
+  color: var(--fontLight-color);
+}
+
+.main .aside .userName {
+  font-size: 1rem;
+  text-shadow: 1px 1px 1px #151414;
+}
+
+.main .aside .userAccount {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.aside .userAccount .profileImage img {
+  width: 70px;
+  border-radius: 50%;
+  box-shadow: 0.2px 0.2px 5px #000;
+}
+
+.aside .userAccount .adminName {
+  padding: 20px;
 }
 
 /******** Tablets and under *********/
